@@ -79,6 +79,18 @@ test('Parse SQL Query with Multiple WHERE Clauses', () => {
   expect(parsed).toEqual({
     fields: ['id', 'name'],
     table: 'student',
+    whereClauses: [
+      {
+        field: 'age',
+        operator: '=',
+        value: '30',
+      },
+      {
+        field: 'name',
+        operator: '=',
+        value: 'John',
+      },
+    ],
     joinCondition: null,
     joinTable: null,
     joinType: null,
