@@ -10,6 +10,7 @@ test('Read CSV File', async () => {
   expect(data[0].age).toBe('30'); //ignore the string type here, we will fix this later
 });
 
+// test-08 
 test('Parse SQL Query', () => {
   const query = 'SELECT id, name FROM student';
   const parsed = parseSelectQuery(query);
